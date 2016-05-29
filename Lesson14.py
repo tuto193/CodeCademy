@@ -13,3 +13,8 @@ class PartTimeEmployee( Employee ):
     def calculate_wage( self, hours ):
         self.hours = hours
         return hours * 12.00
+    def full_time_wage( self, hours ):  #super( Child, self ).parent_method( second argument)
+        return super( PartTimeEmployee, self).calculate_wage( hours )
+
+milton = PartTimeEmployee( "Milton" )
+print milton.full_time_wage( 10 )
