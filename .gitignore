@@ -1,0 +1,3 @@
+#vim files to ignore at all times
+*.swo
+*.swp
